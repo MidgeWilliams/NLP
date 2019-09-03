@@ -1,0 +1,4 @@
+Do not use tabs((?)) Do four spaces instead.
+
+getting input from a user: input("name please:")
+from a file: open(filename, 'r').read()
