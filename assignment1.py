@@ -107,53 +107,84 @@ splitting off punctuations.
 # PROBLEM 1 - determiners
 
 def is_determiner(word):
-    # replace this
-    return True if word == 'the' else False
+    determiners = ['the', 'a', 'an', 'this', 'that', 'those', 'my', 'his', 'her', 'their',
+    'some', 'many', 'every', 'few', 'no', 'each', 'any', 'either', 'neither', 'which',
+    'what', 'whose']
+    return word.lower() in determiners
 
 def remove_determiners(text):
-    # replace this
-    return 'dog is asleep in basket.'
+    text_words = text.split()
 
-# Use any number of helper functions you need. Note the use of "pass". This is a
-# useful little placeholder for code that you have not written yet, it does not
-# do anything, but it makes the syntax legal.
+    for word in text_words:
+        if is_determiner(word):
+            text_words.remove(word)
 
-def helper_function(some_input):
-    pass
+    return ' '.join(text_words)
 
 
 # PROBLEM 2 - remove interior of list
 
 def remove_middle1(lst, first, last):
-    # replace this
-    lst[3:8] = []
+    temp = lst[0:first]
+    temp.extend(lst[last+1:])
+    lst[:] = temp
+    # A better way to do this would be to use remove_middle2:
+    # lst[:] = remove_middle2(lst, first, last)
 
 def remove_middle2(lst, first, last):
-    # replace this
-    return [1, 2, 3, 9]
+    temp = lst[0:first]
+    temp.extend(lst[last+1:])
+    return temp
 
 
 # PROBLEM 3 - tokens and their lengths
 
 def get_tokens_and_lengths(text):
-    return [('Top', 3), ('sites', 5), ('on', 2), ('the', 3), ('Internet', 8)]
+    text_words = text.split()
+    tokens_and_lengths = []
+
+    for word in text_words:
+        tokens_and_lengths.append((word, len(word)))
+
+    return tokens_and_lengths
 
 
 # PROBLEM 4 - counting strings
 
 def count_strings(lst, chars):
-    return 2
+    count = 0
+    for word in lst:
+        size = len(word)
+        if size >= 3 and word[0] in chars and word[size-1] in chars:
+            count += 1
+
+    return count
 
 
 # PROBLEM 5 - consonants
 
+
 def has_most_consonants(text):
-    # replace the body of this function, it is just some stupid code that gets
-    # it right for the examples mentioned above
-    if text == '':
-        return []
-    else:
-        return ['closed.', 'barked.']
+    vowels = ['a','e','i','o','u']
+    text_words = text.split()
+    final_list = []
+
+    if len(text_words) > 0:
+        cons_to_full = {}
+
+        for word in text_words:
+            cons_only = word.lower()
+            for vowel in vowels:
+                cons_only = cons_only.replace(vowel, '')
+            cons_to_full[cons_only] = word
+
+        max_cons = len(max(cons_to_full.keys(), key=len))
+
+        for key in cons_to_full.keys():
+            if len(key) == max_cons:
+                final_list.append(cons_to_full[key])
+
+    return final_list
 
 
 if __name__ == '__main__':
