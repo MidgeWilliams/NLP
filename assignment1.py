@@ -176,6 +176,7 @@ def has_most_consonants(text):
             cons_only = word.lower()
             for vowel in vowels:
                 cons_only = cons_only.replace(vowel, '')
+
             #Adds a dictionary entry from the vowel-less form to the full form
             cons_to_full[cons_only] = word
 
@@ -183,6 +184,7 @@ def has_most_consonants(text):
         max_cons = len(max(cons_to_full.keys(), key=len))
 
         #Finds all of the words who have that same max number of consanants
+
         for key in cons_to_full.keys():
             if len(key) == max_cons:
                 final_list.append(cons_to_full[key])
