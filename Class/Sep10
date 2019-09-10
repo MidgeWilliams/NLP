@@ -1,0 +1,10 @@
+ Classes? Use self for... self? __init__ is the constructor? Needs to have self?
+ All of this is known to me.
+
+Classes take their inheritance as a ()
+so:
+class Animal(object):
+    def __init__(self):
+
+class Dog(Animal):
+    def __init__(self):
