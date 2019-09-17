@@ -1,0 +1,48 @@
+Quiz 1 September 24th 20-30 minutes
+  Notes on Texts, Words, Corpora and WordNet
+  NLTK Book chapters 1 and 2
+  No questions about any "basic" python things (NLTK is fair game)
+  Unix/Git
+
+
+Text Corpus
+- Large and structured collection of Texts
+  - Structured = built for some reason
+- Used for:
+  - Text analysis/statistical analysis
+  - Hypothesis testing
+  - checking occurrences
+  - Validating linguistic rules
+  - Training ML models
+
+Corpus Types
+- Raw vs annotated
+- Monolingual vs multilingual
+- Text only vs multi-modal
+- Parallel/aligned/comparable
+- Types in NLTK
+
+NLTK
+- Text
+- Freq Dist
+- Corpus Reader
+    - Plain Text Corpus Reader
+    - Categorized Tagged Corpus Reader
+- Concatenated Corpus View
+- Stream Backed Corpus View
+
+What to do with a text or corpus?
+- Extract vocab
+  - Including terms/collocations
+  - see contexts of Words
+  - plot word occurrences
+- Top level characteristics
+  - type of text: genre
+- Get statistics
+- Finding things
+  - finding similar Words
+  - finding words with some characteristics
+  - finding "important" words
+- Compare texts
+  - use of words across Texts
+  - find what is special about a particular text

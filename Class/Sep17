@@ -1,0 +1,19 @@
+Issues from Assignment 1:
+Problem 1:
+    - You were supposed to use a list, so I did it right
+    - Could have done: set([''])
+    - In the future avoid list.remove in a loop, because sometimes she fucks up
+      - Make a new list to add to instead
+Problem 2:
+    - could set the slice, rather than taking before and after
+      lst[first:last+1] = []
+Problem 3:
+    - Could use set comprehension
+    - return [(tok, len(tok)) for tok in text.strip().split()]
+Problem 4:
+    - Could have used helpers, didn't seem necessary
+Problem 5:
+    - Probably should have done some helper functions
+    - for the vowels could do set("aeiou")
+    - THERE IS FILTER AND MAP
+      - list(filter()) list(map())
