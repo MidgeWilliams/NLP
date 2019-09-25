@@ -1,0 +1,18 @@
+Quiz today-- end part of class
+
+files only know bits/bytes
+text has characters
+
+So when we translate, needs to go between chars and bytes and translate somehow
+  - Important to know what was used to translate in case something goes wrong
+
+Used ASCII to translate
+
+Latin-1...12 to supplement ASCII for things with Latin alphabet but maybe extra chars
+or accents. But still not ok for things with different writing systems
+
+Then it transitioned into UNICODE which DOES cater to different sets
+
+//
+
+Something about using finite state machines
