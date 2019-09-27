@@ -16,3 +16,5 @@ Then it transitioned into UNICODE which DOES cater to different sets
 //
 
 Something about using finite state machines
+  - Using them to construct sentences
+  - Using them to model lang
