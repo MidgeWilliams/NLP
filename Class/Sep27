@@ -1,0 +1,42 @@
+Guest lecture on Unicode (universal character set)
+
+Character sets and codepoints
+- Computers only understand numbers
+- To represent characters of human languages in computers, we need a mapping from characters to numbers
+- Let's call this transformation "character set"
+    - A character set is a bijective function : NL character |--> integer
+    - Lets call the images (F(x)) of the function "codepoints"
+
+Earliest Days
+- ASCII: early, widespread, standardized mapping form English alph, Arabic num, and some symbols
+- Used 128 numbers to mean these symbols (0 .. 127)
+
+Later..
+- Latin-1 to add another 128 slots for total of 256
+    - Added things like accents/special vowels
+- Again, not enough characters
+
+More and More
+- Cyrillic alone had many different types of encoding, inconsistent
+- Still needed asian and african characters 
+
+So, Unicode entered the scene
+- Needed more characters
+- Needed to force everyone to use the same one for conversion
+- Unicode1.0 came out 1991; added most characters in modern human languages (256 squared)
+- Unicode2.0 came out 1996; raised again by introducing planes, now we can put anything we want (256 to the fourth)
+
+Encoding Decoding
+- Files written in "bytes" not just numbers
+- Encoding: images of characters are to be converted to binary numbers, and sliced into bytes
+- Decoding: when reading from files, programs need to be able to interpret bytes into codepoints
+
+Unicode Encoding
+- Remember that in unicode, there are 65536 "planes" and in each plane there are 65536 codepoints
+- Most commonly used NL characters are in the first plane, called BMP
+- 1 byte is 8 bits, which is 8 binary digits
+- One unicode plane requires 2 bytes
+
+UTF-16 just uses the first 17 planes of unicode, so she's a bit easier to handle
+
+UTF-8 supersets ASCII
